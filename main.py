@@ -23,8 +23,7 @@ s.tracer(0)
 # Setting up the Paddle , Ball & Scoreboard
 paddle_l = Paddle((-350, 0))
 paddle_r = Paddle((350, 0))
-scoreboard1 = Scoreboard((-20, 260))
-scoreboard2 = Scoreboard((20, 260))
+scoreboard = Scoreboard()
 ball = Ball()
 
 # Setting up the Controls
@@ -36,12 +35,12 @@ s.onkey(paddle_r.go_down, "Down")
 
 game_on = True
 while game_on:
-    sleep(0.1)
+    sleep(ball.move_speed)
     s.update()
     ball.move()
 
     # Detect collisions with the wall
-    if ball.ycor() > 285 or ball.ycor() < -285:
+    if ball.ycor() > 280 or ball.ycor() < -280:
         ball.bounce_y()
 
     # Detect collisions with the paddle
@@ -51,12 +50,10 @@ while game_on:
     # Detect if the ball misses any of the paddles
     if ball.xcor() > 380:
         ball.reset()
-        scoreboard1.score += 1
-        scoreboard1.update()
+        scoreboard.point_l()
     
     if ball.xcor() < -380:
         ball.reset()
-        scoreboard2.score += 1
-        scoreboard2.update()
+        scoreboard.point_r()
 
 s.exitonclick()

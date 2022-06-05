@@ -1,15 +1,27 @@
-from turtle import Turtle, pos, position
+from turtle import Turtle
 
 
 class Scoreboard(Turtle):
-    def __init__(self, position):
+    def __init__(self):
         super().__init__()
+        self.color("white")
         self.penup()
         self.hideturtle()
-        self.color("white")
-        self.goto(position)
-        self.score = 0
+        self.score_l = 0
+        self.score_r = 0
+        self.update()
 
     def update(self):
         self.clear()
-        self.write(f"{self.score}", align="center", font=("Verdana", 24, "normal"))
+        self.goto(-100, 200)
+        self.write(f"{self.score_l}", align="center", font=("Courier", 24, "normal"))
+        self.goto(100, 200)
+        self.write(f"{self.score_l}", align="center", font=("Courier", 24, "normal"))
+
+    def point_l(self):
+        self.score_l += 1
+        self.update()
+
+    def point_r(self):
+        self.score_r += 1
+        self.update()
