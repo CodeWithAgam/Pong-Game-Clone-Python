@@ -1,6 +1,6 @@
 # Pong Game Clone Python
  
-Remeber the OG Pong Game from the 19th? Here's a Pong clone built in Python!
+Remeber the OG Pong Game from 1972? Here's a Pong clone built in Python!
 
 ## How To Play:
 Move the Paddles Up/Down using the Arrow Keys.
@@ -16,6 +16,8 @@ Controls:
     For Right Paddle / Player 2:
         Up Arrow Key: Up
         Down Arrow Key: Down
+
+Play it and try it out yourself for the best experience!
 
 ## License:
 
