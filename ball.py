@@ -8,17 +8,20 @@ class Ball(Turtle):
         self.color("white")
         self.penup()
         self.goto(0, 0)
+        self.x_move = 10
+        self.y_move = 10
 
     def move(self):
-        x = self.xcor() + 10 
-        y = self.ycor() + 10 
+        x = self.xcor() + self.x_move 
+        y = self.ycor() + self.y_move
         self.goto(x, y)
 
-    def bounce(self):
-        if self.ycor() > 290:
-            self.setheading(self.heading() + 20)
-            self.setx(200)
+    def bounce_y(self):
+        self.y_move *= -1
+    
+    def bounce_x(self):
+        self.x_move *= -1
 
-        # if self.ycor() < -290:
-        #     self.setxy(-290)
-        #     self.sety(-290)
+    def reset(self):
+        self.goto(0, 0)
+        self.bounce_x()
