@@ -12,7 +12,7 @@ Controls:
 
     For Left Paddle / Player 1:
         W Key: Up
-        S: Down
+        S Key: Down
 
     For Right Paddle / Player 2:
         Up Arrow Key: Up
