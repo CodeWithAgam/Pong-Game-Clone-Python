@@ -9,6 +9,7 @@ The Person to score the most points wins!
 The game has NO winning point, so set your accordingly and play until you can!
 
 Controls:
+
     For Left Paddle / Player 1:
         W Key: Up
         S: Down
