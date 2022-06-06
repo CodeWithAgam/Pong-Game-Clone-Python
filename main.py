@@ -28,10 +28,10 @@ ball = Ball()
 
 # Setting up the Controls
 s.listen()
-s.onkey(paddle_l.go_up, "w") 
-s.onkey(paddle_l.go_down, "s") 
-s.onkey(paddle_r.go_up, "Up")
-s.onkey(paddle_r.go_down, "Down")
+s.onkeypress(paddle_l.go_up, "w") 
+s.onkeypress(paddle_l.go_down, "s") 
+s.onkeypress(paddle_r.go_up, "Up")
+s.onkeypress(paddle_r.go_down, "Down")
 
 game_on = True
 while game_on:
